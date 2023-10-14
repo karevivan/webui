@@ -1,0 +1,46 @@
+.widget mat-card-content {
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  column-gap: 10px;
+}
+
+.no-nothing {
+  margin-top: 100px;
+}
+
+.option2 {
+  padding: 5px 17px;
+
+  h4 {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .tasks {
+    .task {
+      display: flex;
+    }
+
+    .check {
+      color: var(--green);
+    }
+
+    .remove {
+      color: var(--red);
+    }
+  }
+}
+
+.option3 {
+  padding: 5px 17px;
+
+}

@@ -28,6 +28,9 @@ import { IxSlideInService } from 'app/services/ix-slide-in.service';
 import { TaskService } from 'app/services/task.service';
 import { WebSocketService } from 'app/services/ws.service';
 import { AppState } from 'app/store';
+import {
+  CloudsyncWizardComponent
+} from 'app/pages/data-protection/cloudsync/cloudsync-wizard/cloudsync-wizard.component';
 
 @UntilDestroy()
 @Component({
@@ -126,6 +129,10 @@ export class CloudSyncTaskCardComponent implements OnInit {
         this.dialogService.error(this.errorHandler.parseError(err));
       },
     });
+  }
+
+  onWizard(): void {
+    this.slideInService.open(CloudsyncWizardComponent, { wide: true });
   }
 
   openForm(row?: CloudSyncTaskUi): void {

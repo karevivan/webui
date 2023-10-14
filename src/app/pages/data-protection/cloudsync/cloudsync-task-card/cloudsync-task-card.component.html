@@ -9,6 +9,11 @@
     <div class="actions">
       <button
         mat-button
+        [ixTest]="['replication-task', 'add']"
+        (click)="onWizard()"
+      >{{ 'Wizard' | translate }}</button>
+      <button
+        mat-button
         [ixTest]="['cloudsync-task', 'add']"
         (click)="openForm()"
       >{{ 'Add' | translate }}</button>

@@ -1,0 +1,32 @@
+.columns {
+  display: flex;
+  column-gap: 15px;
+
+  > * {
+    width: 50%
+  }
+}
+
+.form-actions {
+  border-top: 1px solid var(--lines);
+  padding: 16px 11px;
+
+  button {
+    margin-right: 8px;
+  }
+}
+
+.service-explanation {
+  width: 200%;
+  background-color: var(--alt-bg1);
+  padding: 8px 10px;
+  margin-bottom: 13px;
+  color: var(--fg2);
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    display: block;
+    width: 156px;
+  }
+}

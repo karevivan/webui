@@ -73,6 +73,8 @@
     <!-- SORTABLE WIDGETS -->
     <ng-container *ngIf="isLoaded && screenType === ScreenType.Desktop">
       <ng-container *ngIf="renderedWidgets">
+        <ix-widget-backups-empty [state]="1"></ix-widget-backups-empty>
+        <ix-widget-backups-empty [state]="2"></ix-widget-backups-empty>
         <div
           *ngFor="let widget of renderedWidgets; let index = index; trackBy: getWidgetId"
           ixDropGridItem

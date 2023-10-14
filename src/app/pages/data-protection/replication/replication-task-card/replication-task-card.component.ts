@@ -29,6 +29,9 @@ import { IxSlideInService } from 'app/services/ix-slide-in.service';
 import { StorageService } from 'app/services/storage.service';
 import { WebSocketService } from 'app/services/ws.service';
 import { AppState } from 'app/store';
+import {
+  CloudsyncWizardComponent
+} from 'app/pages/data-protection/cloudsync/cloudsync-wizard/cloudsync-wizard.component';
 
 @UntilDestroy()
 @Component({

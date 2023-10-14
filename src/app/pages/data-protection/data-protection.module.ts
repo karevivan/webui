@@ -67,6 +67,7 @@ import { ReplicationWizardComponent } from './replication/replication-wizard/rep
 import { ResilverConfigComponent } from './scrub-task/resilver-config/resilver-config.component';
 import { ScrubListComponent } from './scrub-task/scrub-list/scrub-list.component';
 import { SmartTaskListComponent } from './smart-task/smart-task-list/smart-task-list.component';
+import { CloudsyncWizardComponent } from './cloudsync/cloudsync-wizard/cloudsync-wizard.component';
 
 @NgModule({
   imports: [
@@ -129,6 +130,7 @@ import { SmartTaskListComponent } from './smart-task/smart-task-list/smart-task-
     ReplicationTaskCardComponent,
     ScrubTaskCardComponent,
     SnapshotTaskCardComponent,
+    CloudsyncWizardComponent,
   ],
 })
 export class DataProtectionModule {}

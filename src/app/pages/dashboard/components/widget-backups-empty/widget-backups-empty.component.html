@@ -1,0 +1,67 @@
+<div class="widget stats-widget" ngClass.xs="double-height xs">
+  <div class="card-container front">
+    <mat-card
+      class="front"
+      fxLayout="row"
+      fxLayoutWrap
+      fxLayoutAlign="space-between stretch"
+    >
+      <mat-card-content>
+        <ix-drag-handle>
+          <mat-toolbar-row>
+            <h3 class="mat-card-title-text">
+              <ix-drag-handle>
+                <div class="card-title-text">
+                  <span>{{ 'Backups' | translate }}</span>
+                </div>
+              </ix-drag-handle>
+            </h3>
+          </mat-toolbar-row>
+        </ix-drag-handle>
+        <div class="content-wrapper container">
+          <div *ngIf="state === 1" class="no-nothing">
+            <div class="no-text">
+              No backups set up yet.
+            </div>
+
+            <div class="buttons">
+              <button mat-button>Add Replication Task</button>
+              <button mat-button>Add Cloudsync Task</button>
+            </div>
+          </div>
+
+          <div *ngIf="state === 2" class="option2">
+            <h4>Tasks</h4>
+            <div class="tasks">
+              <div class="task">
+                <div class="type">Replication</div>
+                <div class="name">My Task Name</div>
+                <ix-icon name="check_circle" class="check"></ix-icon>
+                <div class="date">Yesterday</div>
+              </div>
+              <div class="task">
+                <div class="type">Cloudsync</div>
+                <div class="name">Google Drive</div>
+                <ix-icon name="remove" class="remove"></ix-icon>
+                <div class="date">2 days ago</div>
+              </div>
+              <div class="task">
+                <div class="type">Replication</div>
+                <div class="name">My Task Name</div>
+                <ix-icon name="check_circle" class="check"></ix-icon>
+                <div class="date">Yesterday</div>
+              </div>
+            </div>
+
+            <h4>Datasets Without Tasks</h4>
+
+          </div>
+
+          <div *ngIf="state === 3" class="option3">
+
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

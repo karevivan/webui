@@ -127,13 +127,21 @@ export class CloudsyncFormComponent implements OnInit {
 
   credentialsList: CloudsyncCredential[] = [];
   readonly credentialsOptions$ = this.cloudCredentialService.getCloudsyncCredentials().pipe(
-    map((options) => {
-      return options.map((option) => {
+    map((credentials) => {
+      const options = credentials.map((option) => {
         if (option.provider === CloudsyncProviderName.GoogleDrive) {
           this.googleDriveProviderId = option.id;
         }
         return { label: `${option.name} (${option.provider})`, value: option.id };
       });
+
+      return [
+        ...options.slice(0, 2),
+        {
+          label: this.translate.instant('Add New'),
+          value: 'new',
+        }
+      ];
     }),
     untilDestroyed(this),
   );

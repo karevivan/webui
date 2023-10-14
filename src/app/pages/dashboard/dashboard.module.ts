@@ -45,6 +45,7 @@ import { DashboardStorageStore } from 'app/pages/dashboard/store/dashboard-stora
 import { DashboardStore } from 'app/pages/dashboard/store/dashboard-store.service';
 import { ResourcesUsageStore } from 'app/pages/dashboard/store/resources-usage-store.service';
 import { routing } from './dashboard.routing';
+import { WidgetBackupsEmptyComponent } from './components/widget-backups-empty/widget-backups-empty.component';
 
 @NgModule({
   imports: [
@@ -90,6 +91,7 @@ import { routing } from './dashboard.routing';
     WidgetNetworkComponent,
     WidgetStorageComponent,
     SimpleFailoverBtnComponent,
+    WidgetBackupsEmptyComponent,
   ],
   providers: [
     ResourcesUsageStore,
